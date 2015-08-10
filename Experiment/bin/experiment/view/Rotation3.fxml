@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="experiment.view.RotationController">
+   <top>
+      <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextFlow textAlignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[6] Rotate ">
+                     <font>
+                        <Font name="Impact" size="45.0" />
+                     </font>
+                  </Text>
+                  <Arc fx:id="rectStart1" fill="#ff4444" length="270.0" radiusX="20.0" radiusY="20.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" to ">
+                     <font>
+                        <Font name="Impact" size="45.0" />
+                     </font>
+                  </Text>
+                  <Arc fx:id="rectEnd1" fill="#1fff61" length="270.0" radiusX="20.0" radiusY="20.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" using ">
+                     <font>
+                        <Font name="Impact" size="45.0" />
+                     </font>
+                  </Text>
+                  <Group scaleX="0.9" scaleY="0.9" translateY="-18.0">
+                     <children>
+                        <Polygon fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="-20.0" />
+                              <Double fx:value="20.0" />
+                              <Double fx:value="20.0" />
+                              <Double fx:value="20.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="-20.0" />
+                           </points>
+                        </Polygon>
+                        <Text layoutX="-4.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="26.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" or ">
+                     <font>
+                        <Font name="Impact" size="45.0" />
+                     </font>
+                  </Text>
+                  <Group scaleX="0.9" scaleY="0.9" translateY="-18.0">
+                     <children>
+                        <Polygon fill="YELLOW" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="-20.0" />
+                              <Double fx:value="20.0" />
+                              <Double fx:value="20.0" />
+                              <Double fx:value="20.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="-20.0" />
+                           </points>
+                        </Polygon>
+                        <Text layoutX="-6.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R" textAlignment="CENTER">
+                           <font>
+                              <Font name="Impact" size="26.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </GridPane.margin>
+            </TextFlow>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <AnchorPane fx:id="playground" BorderPane.alignment="CENTER">
+         <children>
+            <Arc fx:id="rectEnd" fill="#1fff61" layoutX="757.0" layoutY="315.0" length="270.0" radiusX="250.0" radiusY="250.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+            <Arc fx:id="rectStart" fill="#ff4444" layoutX="757.0" layoutY="315.0" length="270.0" radiusX="250.0" radiusY="250.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+            <Polygon fx:id="polyLeft" fill="DODGERBLUE" layoutX="487.0" layoutY="107.0" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-20.0" />
+                  <Double fx:value="20.0" />
+                  <Double fx:value="20.0" />
+                  <Double fx:value="20.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-20.0" />
+               </points>
+            </Polygon>
+            <Polygon fx:id="polyRight" fill="YELLOW" layoutX="1040.0" layoutY="537.0" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-20.0" />
+                  <Double fx:value="20.0" />
+                  <Double fx:value="20.0" />
+                  <Double fx:value="20.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-20.0" />
+               </points>
+            </Polygon>
+            <TextFlow fx:id="middleMessage" layoutX="515.0" layoutY="285.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Press ">
+                     <font>
+                        <Font name="Impact" size="49.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#ffa100" strokeType="OUTSIDE" strokeWidth="0.0" text="SPACE BAR ">
+                     <font>
+                        <Font name="Impact" size="49.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="to start">
+                     <font>
+                        <Font name="Impact" size="49.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
